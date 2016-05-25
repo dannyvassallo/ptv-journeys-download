@@ -2,9 +2,9 @@
 var proto = 'https://',
 s3 = 's3.amazonaws.com/',
 bucket= 'myfangate.com/',
-folder = 'ptvmp3/',
-rando = 'RBfY8gI8fEWt8w0b2ivM/',
-filename = '0cMOSQrKKNhDnYkTYZQJ',
+folder = 'tonight-alive-download/',
+rando = 'V1ODP6RNmh/',
+filename = '8520263815',
 ext = '.zip';
 
 function IhTs8iP6Sk(){
@@ -54,28 +54,35 @@ $('input').focus(function(){
   }
 });
 
+
+function resizeHeader(){
+  var newHeight = $('.governor').height() / 2,
+  windowW = $(window).width();
+  if(windowW > 599){
+    $('#journeys').css('height', newHeight);
+  } else {
+    $('#journeys').css({'height':'auto', 'margin-top': '20px'});
+  }
+}
+
 $(function(){
-  $(document).on('click', '.caret', function(){
-    $('.select-dropdown').trigger('click');
-  });
+  // $(document).on('click', '.caret', function(){
+  //   $('.select-dropdown').trigger('click');
+  // });
 
-  $(".album-mini").load(function() {
-    var winW = $(window).width();
-    resizeForm();
-    if(winW >= 640){
-      $('.cta').height($(this).height());
-    }
-  }).attr('src', 'https://s3.amazonaws.com/myfangate.com/ptv2016/albumcover.jpg');
+  $(".governor").load(function() {
+    resizeHeader();
+  }).attr('src', 'https://s3.amazonaws.com/myfangate.com/tonight-alive-download/promo.png');
 
-  var onMouseDown = function(e) {
-    // preventing the default still allows the scroll, but blocks the blur.
-    // We're inside the scrollbar if the clientX is >= the clientWidth.
-    if (e.clientX >= e.target.clientWidth || e.clientY >= e.target.clientHeight) {
-      e.preventDefault();
-    }
-  };
+  // var onMouseDown = function(e) {
+  //   // preventing the default still allows the scroll, but blocks the blur.
+  //   // We're inside the scrollbar if the clientX is >= the clientWidth.
+  //   if (e.clientX >= e.target.clientWidth || e.clientY >= e.target.clientHeight) {
+  //     e.preventDefault();
+  //   }
+  // };
   //$newSelect.on('mousedown', onMouseDown);
-  $('select').siblings('input.select-dropdown').on('mousedown', onMouseDown);
+  // $('select').siblings('input.select-dropdown').on('mousedown', onMouseDown);
 
 });
 
@@ -87,9 +94,5 @@ function resizeForm(){
 }
 
 $(window).resize(function(){
-  var winW = $(window).width();
-  resizeForm();
-  if(winW >= 640){
-    $('.cta').height($('.album-mini').height());
-  }
+  resizeHeader();
 });
