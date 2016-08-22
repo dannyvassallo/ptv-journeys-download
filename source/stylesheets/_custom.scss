@@ -1,21 +1,29 @@
 // PUT CUSTOM SCSS / SASS HERE
 @font-face {
-  font-family: 'ITC Franklin Gothic Std';
-  src: url('../fonts/ITCFranklinGothicStd-MdCd.eot');
-  src: url('../fonts/ITCFranklinGothicStd-MdCd.eot?#iefix') format('embedded-opentype'),
-    url('../fonts/ITCFranklinGothicStd-MdCd.woff2') format('woff2'),
-    url('../fonts/ITCFranklinGothicStd-MdCd.woff') format('woff'),
-    url('../fonts/ITCFranklinGothicStd-MdCd.ttf') format('truetype'),
-    url('../fonts/ITCFranklinGothicStd-MdCd.svg#ITCFranklinGothicStd-MdCd') format('svg');
-  font-weight: 500;
-  font-style: normal;
+	font-family:'FuturaStd-Bold';
+	src: url('../fonts/FuturaStd-Bold_gdi.eot');
+	src: url('../fonts/FuturaStd-Bold_gdi.eot?#iefix') format('embedded-opentype'),
+		url('../fonts/FuturaStd-Bold_gdi.woff') format('woff'),
+		url('../fonts/FuturaStd-Bold_gdi.ttf') format('truetype'),
+		url('../fonts/FuturaStd-Bold_gdi.otf') format('opentype'),
+		url('../fonts/FuturaStd-Bold_gdi.svg#FuturaStd-Bold') format('svg');
+	font-weight: 700;
+	font-style: normal;
+	font-stretch: normal;
+	unicode-range: U+0020-00FE;
 }
 
+html{
+ height:100%;
+ min-height:100%;
+ }
+body{
+ min-height:100%;
+}
 
 body{
-  font-family: 'ITC Franklin Gothic Std';
-  background-image: url('https://s3.amazonaws.com/myfangate.com/tonight-alive-download/repeatingbackground.jpg');
-  background-repeat: repeat;
+  font-family:'FuturaStd-Bold';
+  background-color: #00b6be;
   text-transform: uppercase;
   letter-spacing: 1px;
 }
@@ -104,8 +112,8 @@ input[type="checkbox"].filled-in:checked+label:before {
     height: 13px;
     border-top: 2px solid transparent;
     border-left: 2px solid transparent;
-    border-right: 2px solid #65366A;
-    border-bottom: 2px solid #65366A;
+    border-right: 2px solid #f4858e;
+    border-bottom: 2px solid #f4858e;
     -webkit-transform: rotateZ(37deg);
     transform: rotateZ(37deg);
     -webkit-transform-origin: 100% 100%;
@@ -134,22 +142,20 @@ div.toast.red{
 .ptv-red:hover,
 .ptv-red:active,
 .ptv-red:focus{
-  background-color: #65366A;
+  background-color: #f4858e;
 }
 
 .ptv-red-text{
-  color: #65366A;
+  color: #f4858e;
 }
 
 #form-zone{
   margin-bottom: 0 !important;
+  margin-top: 50px;
 }
 
 .promo{
   padding: 0 !important;
-  background-image: url('https://s3.amazonaws.com/myfangate.com/tonight-alive-download/background.jpg');
-  background-size: cover;
-  background-position: center center;
   img{
     margin-bottom: -9px;
   }
@@ -190,8 +196,29 @@ div.toast.red{
 
 .journeys-logo{
   max-width: 600px;
+  margin-top: 20px;
 }
 
 .attitude{
   max-width: 400px;
+}
+
+#header{
+  margin-bottom: 0;
+  background-image: url('https://s3.amazonaws.com/myfangate.com/ptv-journeys/background.jpg');
+  background-size: cover;
+  background-position: center center;
+}
+
+#cta{
+  padding-top: 20px;
+  padding-bottom: 20px;
+  border-bottom: 10px white solid;
+  background-image: url('https://s3.amazonaws.com/myfangate.com/ptv-journeys/palms.jpg');
+  background-size: cover;
+  background-position: center center;
+  background-repeat: no-repeat;
+  .row{
+    margin-bottom: 0;
+  }
 }
